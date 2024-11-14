@@ -1,6 +1,9 @@
 package com.example.backApi.models;
 
-
+import jakarta.persistence.Column;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -10,12 +13,12 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "smartphone")
-public class SmartPhone {
+@Table(name = "productos")
+public class Productos {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_smartphone")
-    private Long idSmartPhone;
+    @Column(name = "idProducto")
+    private Long idProducto;
     private String marca;
     private Long precio;
 }
