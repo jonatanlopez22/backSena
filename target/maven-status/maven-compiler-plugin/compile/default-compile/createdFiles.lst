@@ -1,7 +1,6 @@
 com\example\backApi\security\CustomUsersDetailsService.class
 com\example\backApi\security\ConstantesSeguridad.class
 com\example\backApi\dtos\DtoAuthRespuesta.class
-com\example\backApi\BackApiApplication$Myconfiguration.class
 com\example\backApi\security\JwtAuthenticationFilter.class
 com\example\backApi\BackApiApplication.class
 com\example\backApi\services\ProductoService.class
@@ -13,7 +12,6 @@ com\example\backApi\controllers\RestControllerAuth.class
 com\example\backApi\repositorys\IProductoRepository.class
 com\example\backApi\security\JwtAuthenticationEntryPoint.class
 com\example\backApi\dtos\DtoRegistroRespuesta.class
-com\example\backApi\BackApiApplication$Myconfiguration$1.class
 com\example\backApi\models\Usuarios.class
 com\example\backApi\dtos\DtoRegistro.class
 com\example\backApi\models\Roles.class

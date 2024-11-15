@@ -24,7 +24,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Collections;
 
 @RestController
-//@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping("/api/auth/")
 public class RestControllerAuth {
     private AuthenticationManager authenticationManager;
@@ -43,7 +43,7 @@ public class RestControllerAuth {
         this.jwtGenerador = jwtGenerador;
     }
     //Método para poder registrar usuarios con role "user"
-    //@CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "http://localhost:4200")
     @PostMapping("register")
     public ResponseEntity<DtoRegistroRespuesta> registrar(@RequestBody DtoRegistro dtoRegistro) {
         System.out.println("dto aqui---------------------------"+dtoRegistro);
@@ -69,7 +69,7 @@ public class RestControllerAuth {
     }
 
     //Método para poder guardar usuarios de tipo ADMIN
-    //@CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "http://localhost:4200")
     @PostMapping("registerAdm")
     public ResponseEntity<String> registrarAdmin(@RequestBody DtoRegistro dtoRegistro) {
         if (usuariosRepository.existsByUsername(dtoRegistro.getUsername())) {
@@ -85,7 +85,7 @@ public class RestControllerAuth {
     }
 
     //Método para poder logear un usuario y obtener un token
-    //@CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "http://localhost:4200")
     @PostMapping("login")
     public ResponseEntity<DtoAuthRespuesta> login(@RequestBody DtoLogin dtoLogin) {
         Authentication authentication = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(
