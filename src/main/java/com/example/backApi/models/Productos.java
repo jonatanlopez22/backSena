@@ -19,6 +19,8 @@ public class Productos {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "idProducto")
     private Long idProducto;
+    private String photo;
     private String marca;
+    private String name;
     private Long precio;
 }

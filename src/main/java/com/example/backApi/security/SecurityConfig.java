@@ -63,6 +63,12 @@ public class SecurityConfig {
                 .requestMatchers(HttpMethod.GET,"/api/producto/listarId/**").hasAnyAuthority("ADMIN" , "USER")
                 .requestMatchers(HttpMethod.DELETE,"/api/producto/eliminar/**").hasAuthority("ADMIN")
                 .requestMatchers(HttpMethod.PUT, "/api/producto/actualizar").hasAuthority("ADMIN")
+                .requestMatchers(HttpMethod.POST, "/api/carrito/crear").hasAnyAuthority("ADMIN" , "USER")
+                .requestMatchers(HttpMethod.GET,"/api/carrito/listar").hasAnyAuthority("ADMIN" , "USER")
+                .requestMatchers(HttpMethod.GET,"/api/carrito/listarId/**").hasAnyAuthority("ADMIN" , "USER")
+                .requestMatchers(HttpMethod.GET,"/api/carrito/listarUser/**").hasAnyAuthority("ADMIN" , "USER")
+                .requestMatchers(HttpMethod.DELETE,"/api/carrito/eliminar/**").hasAnyAuthority("ADMIN" , "USER")
+                .requestMatchers(HttpMethod.PUT, "/api/carrito/actualizar").hasAnyAuthority("ADMIN" , "USER")
                 .anyRequest().authenticated()
                 .and()
                 .httpBasic();
